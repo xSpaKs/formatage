@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>La boucle WordPress</title>
+
+        <meta name="Description" content="Explication de la boucle WordPress" />
+    </head>
+    <body>
+        <header>
+            <h1>La boucle WordPress</h1>
+            <img src="image.png" alt="Code PHP de la boucle WordPress" />
+        </header>
+        <h2>L’affichage d’un article ou d’une page dans la boucle</h2>
+        <p>
+            L’affichage est déclenché par l’instruction suivante : <br />
+            &lt;?php get_template_part( 'content', get_post_format() ); ?>
+        </p>
+
+        <h2>
+            La boucle WordPress - fonction d'affichage d'un article La fonction
+        </h2>
+        <p>
+            get_template_part permet d’exécuter les instructions contenues dans
+            un fichier
+            <a
+                href="https://fr.wikipedia.org/wiki/PHP#:~:text=PHP%3A%20Hypertext%20Preprocessor%2C%20plus%20connu,langage%20interpr%C3%A9t%C3%A9%20de%20fa%C3%A7on%20locale."
+                >php</a
+            >
+            à l’endroit où elle est appelée. C’est comme si on récupérait du
+            code dans un fichier
+            <a
+                href="https://fr.wikipedia.org/wiki/PHP#:~:text=PHP%3A%20Hypertext%20Preprocessor%2C%20plus%20connu,langage%20interpr%C3%A9t%C3%A9%20de%20fa%C3%A7on%20locale."
+                >php</a
+            >
+            et qu’on venait l’insérer dans la boucle.
+        </p>
+        <p>Get_template_part a deux paramètres :</p>
+        <ol>
+            <li>‘content‘ : début du nom du fichier php à insérer,</li>
+            <li>
+                get_post_format() : fonction permettant de récupérer le format
+                associé à l’article.
+            </li>
+        </ol>
+        <p>
+            Dans le répertoire contenant le thème twentythirteen, on constate
+            qu’il existe des fichiers dont le nom commence par ‘content’ et qui
+            se terminent par les noms des différents formats d’articles.
+        </p>
+        <p>
+            Par exemple, ‘get_template_part’ permet d’afficher un article dont
+            le format est ‘video’ suivant les instructions contenues dans le
+            fichier ‘content-video’.
+        </p>
+    </body>
+</html>

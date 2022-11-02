@@ -1,0 +1,20 @@
+La boucle WordPress
+
+L’affichage d’un article ou d’une page dans la boucle
+
+L’affichage est déclenché par l’instruction suivante :
+
+<?php get_template_part( 'content', get_post_format() ); ?>
+
+La boucle WordPress - fonction d'affichage d'un article
+
+La fonction get_template_part permet d’exécuter les instructions contenues dans un fichier php à l’endroit où elle est appelée. C’est comme si on récupérait du code dans un fichier php et qu’on venait l’insérer dans la boucle.
+
+Get_template_part a deux paramètres :
+
+1- ‘content‘ : début du nom du fichier php à insérer,
+2- get_post_format() : fonction permettant de récupérer le format associé à l’article.
+
+Dans le répertoire contenant le thème twentythirteen, on constate qu’il existe des fichiers dont le nom commence par ‘content’ et qui se terminent par les noms des différents formats d’articles.
+
+Par exemple, ‘get_template_part’ permet d’afficher un article dont le format est ‘video’ suivant les instructions contenues dans le fichier ‘content-video’.
